@@ -14,7 +14,7 @@ Meteor.startup(function () {
 	}
 
 	//set TheMovieDB API
-	TMDBSearch.api = "95a281fbdbc2d2b7db59680dade828a6";
+	TMDBSearch.api = "123a0c07c619e333789fb42907d79eaa";
 	TMDBSearch.language = "en";
 
 	var settings = Settings.find().fetch()[0];
