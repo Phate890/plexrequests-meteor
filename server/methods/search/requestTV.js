@@ -15,7 +15,7 @@ Meteor.methods({
 
 		// Get TVDB
 		try {
-			var response = HTTP.call("GET", "https://api.themoviedb.org/3/tv/" + id + "/external_ids?api_key=" + TMDBSearch.api);
+			var response = HTTP.call("GET", "https://api.themoviedb.org/3/tv/" + request.id + "/external_ids?api_key=" + TMDBSearch.api);
 			var tvdb = response.data.tvdb_id;
 			if (typeof tvdb !== "number") {
 				logger.error(("Error getting TVDB ID, none found!"));
