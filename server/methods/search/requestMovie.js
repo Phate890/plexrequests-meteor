@@ -17,7 +17,7 @@ Meteor.methods({
 		// Movie Request only requires IMDB_ID
 		//Get IMDB ID
 		try {
-			var response = HTTP.call("GET", "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + TMDBSearch.api);
+			var response = HTTP.call("GET", "https://api.themoviedb.org/3/movie/" + request.id + "?api_key=" + TMDBSearch.api);
 			var imdb = response.data.imdb_id;
 			if (imdb.indexOf("tt") === -1) {
 				logger.error(("Error getting IMDB ID, none found!"));
